@@ -30,7 +30,10 @@ public class HopperLockCommand {
         String state1 = StringArgumentType.getString(context, "state");
         boolean state = false;
         if (state1.equals("true")) state = true;
-        else if (!state1.equals("false")) context.getSource().sendMessage(Text.literal("Illegal Argument : Use true or false").formatted(Formatting.DARK_RED));
+        else if (!state1.equals("false")) {
+            context.getSource().sendMessage(Text.literal("Illegal Argument : Use true or false").formatted(Formatting.DARK_RED));
+            return 0;
+        }
         context.getSource().sendMessage(Text.literal("HopperLock is Now being " + state).formatted(Formatting.AQUA));
         ConfigManager.hopperLock = state;
         return 1;
