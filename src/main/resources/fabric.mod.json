@@ -20,7 +20,7 @@
     "hopper_locker.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=0.15.6",
     "fabric": "*",
     "minecraft": ">=1.8"
   }

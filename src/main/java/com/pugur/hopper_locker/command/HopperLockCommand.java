@@ -36,6 +36,7 @@ public class HopperLockCommand {
         }
         context.getSource().sendMessage(Text.literal("HopperLock is Now being " + state).formatted(Formatting.AQUA));
         ConfigManager.hopperLock = state;
+        ConfigManager.properties.setProperty("hopperLock", String.valueOf(state));
         return 1;
     }
 
