@@ -27,7 +27,10 @@ public class HopperLockCommand {
     }
 
     private static int update(CommandContext<ServerCommandSource> context) {
-        boolean state = Boolean.parseBoolean(StringArgumentType.getString(context, "state"));
+        String state1 = StringArgumentType.getString(context, "state");
+        boolean state = false;
+        if (state1.equals("true")) state = true;
+        else if (!state1.equals("false")) context.getSource().sendMessage(Text.literal("Illegal Argument : Use true or false").formatted(Formatting.DARK_RED));
         context.getSource().sendMessage(Text.literal("HopperLock is Now being " + state).formatted(Formatting.AQUA));
         ConfigManager.hopperLock = state;
         return 1;
