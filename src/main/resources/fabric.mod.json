@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "hopper_locker",
+  "version": "${version}",
+  "name": "hopper_locker",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/pugur/hopper_locker"
+  },
+  "license": "MIT",
+  "icon": "assets/hopper_locker/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.pugur.hopper_locker.HopperLocker"
+    ]
+  },
+  "mixins": [
+    "hopper_locker.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=1.19.4"
+  }
+}
